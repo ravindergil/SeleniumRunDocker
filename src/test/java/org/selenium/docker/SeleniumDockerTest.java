@@ -38,6 +38,7 @@ public class SeleniumDockerTest {
         driver = new ChromeDriver();
 
         driver.get("https://alchemy.hguy.co/jobs/wp-admin");
+        driver.manage().window().maximize();
         driver.findElement(By.id("user_login")).sendKeys(Username);
         driver.findElement(By.id("user_pass")).sendKeys(Password);
         driver.findElement(By.id("wp-submit")).click();
