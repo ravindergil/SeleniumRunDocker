@@ -44,7 +44,7 @@ public class SeleniumDockerTest {
         } else if (RunMode.equalsIgnoreCase("DOCKER")) {
            driver = setDriverCapabilities();
         } else{
-            System.out.println("Given Run time parameter is w=not correct");
+            System.out.println("Given Run time parameter is not correct");
         }
 
 
