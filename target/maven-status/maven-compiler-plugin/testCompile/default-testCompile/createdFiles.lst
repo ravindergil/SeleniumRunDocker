@@ -1,2 +1,3 @@
 org\selenium\docker\SeleniumDockerTest.class
+utility\PropertiesReader.class
 utility\ReadProperties.class
