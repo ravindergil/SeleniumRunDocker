@@ -1,5 +1,7 @@
 package utility;
 
+import junit.framework.Assert;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -53,4 +55,15 @@ public class ReadProperties {
     }
 
     public static String getBrowser() { return readData("Browser"); }
+
+    public static String PrintMavenEnvProperties() {
+        PropertiesReader reader;
+        try {
+            reader = new PropertiesReader("properties-from-pom.properties");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        return reader.getProperty("run.mode");
+    }
+
 }
