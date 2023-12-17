@@ -40,7 +40,10 @@ public class SeleniumDockerTest {
 
         if(RunMode.equalsIgnoreCase("LOCAL")){
             driver = new ChromeDriver();
-            System.out.println("Hit Chrome Browser");
+            System.out.println("Hit Local Chrome Browser");
+        } else if (RunMode.equalsIgnoreCase("")) {
+            driver = new ChromeDriver();
+            System.out.println("Hit empty Chrome Browser");
         } else if (RunMode.equalsIgnoreCase("DOCKER")) {
            driver = setDriverCapabilities();
         } else{
