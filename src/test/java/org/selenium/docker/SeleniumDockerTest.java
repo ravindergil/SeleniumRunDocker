@@ -46,6 +46,7 @@ public class SeleniumDockerTest {
             System.out.println("Hit empty Chrome Browser");
         } else if (RunMode.equalsIgnoreCase("DOCKER")) {
            driver = setDriverCapabilities();
+            System.out.println("Hit Docker Chrome Browser");
         } else{
             System.out.println("Given Run time parameter is not correct");
         }
